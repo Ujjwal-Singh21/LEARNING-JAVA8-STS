@@ -18,17 +18,26 @@ public class SortListDemo1 {
 		list.add(4);
 		list.add(3);
 
-		// SORTING USING COLLECTIONS CLASS METHODS
-		Collections.sort(list); // normal ascending order
+		// 1) SORTING USING COLLECTIONS CLASS sort() method :-
+		//-----------------------------------------------------
+		// normal ascending order
+		Collections.sort(list); 
 		System.out.println("Using Collections class sort :" + list);
-		Collections.reverse(list); // normal descending order
+		
+		//since now the list is sorted in ascending order, simply reversing this updated list will give
+		//descending order
+		Collections.reverse(list);
 		System.out.println("Using Collections class reverse sort :" + list);
 
-		// SORTING USING STREAM
-		list.stream().sorted().forEach(s -> System.out.println("Using stream api normal sorted method :" + s));
-		// ANOTHER SORTED METHOD WHICH TAKES COMPARATOR AS INPUT
+		// 2) SORTING USING STREAM :-
+		//----------------------------
+		list.stream().sorted().forEach(s -> System.out.println("Using stream api 1st sorted method :" + s));
+		
+		//ANOTHER SORTED METHOD WHICH TAKES COMPARATOR AS INPUT
+		//Here we have used Comparator Interface's static method reverseOrder() for sorting
+		//reverseOrder() -> Returns a comparator, that imposes the reverse of the natural ordering.
 		list.stream().sorted(Comparator.reverseOrder())
-				.forEach(s -> System.out.println("Using stream api second  sorted method :" + s));
+				.forEach(s -> System.out.println("Using stream api 2nd sorted method :" + s));
 	}
 
 }

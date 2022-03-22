@@ -23,13 +23,15 @@ public class LambdaDemo2 {  // outer main class
 
 	public static void main(String[] args) {
 
-		AddInterface addInterface = new AddInterface() { // making an inner anonymous class
+		// making an inner anonymous class
+		AddInterface addInterface = new AddInterface() { 
 			@Override
 			public int add(int a, int b) {
 
 				return a + b;
 			}
 		};
+		
 		System.out.println(addInterface.add(22, 22));
 	}
 

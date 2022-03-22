@@ -5,14 +5,16 @@ import java.util.Comparator;
 import java.util.List;
 
 //for Custom objects
-// sorting using comparator separate class.
+//sorting using Comparator separate class.
+//------------------------------------------
 public class SortListDemo2 {
 
 	public static void main(String[] args) {
 
+		//getting List of Employees from DataBase Class
 		List<Employee> employees = DataBase.getEmployees();
 
-		// Collections.sort(employees, new MyComparator());
+		//sorting using 2nd sort method that needs Comparator as 2nd arg
 		Collections.sort(employees, new MyComparator());
 		System.out.println(employees);
 
@@ -20,12 +22,14 @@ public class SortListDemo2 {
 
 }
 
-//Separate implementation class for comparator
+//Separate implementation class for Comparator
 class MyComparator implements Comparator<Employee> {
 
 	@Override
-	public int compare(Employee o1, Employee o2) {
+	public int compare(Employee employeeObj1, Employee employeeObj2) {
 
-		return (int) (o2.getSalary() - o1.getSalary()); // typecasting long to int and ascending order
+		// typecasting -> double to int -> because Comparator should return primitive int type number(eg:- 1 or -1 ).
+		// and then sorting as descending order
+		return (int) (employeeObj2.getSalary() - employeeObj1.getSalary()); 
 	}
 }

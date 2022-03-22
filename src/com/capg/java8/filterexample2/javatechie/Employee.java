@@ -8,6 +8,10 @@ public class Employee {
 	private String dept;
 	private double salary;
 
+	Employee() {
+		super();
+	}
+
 	public Employee(int empId, String name, String dept, double salary) {
 		super();
 		this.empId = empId;

@@ -11,10 +11,12 @@ public class ConsumerDemo3 {
 	public static void main(String[] args) {
 
 		Consumer<Integer> consumer = t -> System.out.println(t);
-		
+
+		// creating an Array as List
 		List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
 
-		list.forEach(consumer); // FOR-EACH TAKES CONSUMER OBJECT AS INPUT
+		// printing that List using consumer
+		list.forEach(consumer); // -> FOR-EACH TAKES CONSUMER OBJECT AS INPUT
 	}
 
 }
@@ -24,6 +26,7 @@ public class ConsumerDemo3 {
 //
 //	public static void main(String[] args) {
 //
+//      //creating an Array as List
 //		List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
 //
 //		list.forEach(t -> System.out.println(t)); 

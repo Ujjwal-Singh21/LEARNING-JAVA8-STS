@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 // (step-1) filtering employess having salary > 5 lakhs INR
+//--------------------------------------------------------------
 //public class TaxServiceLayer {
 //
 //	public static List<Employee> evaluateTaxUsers() {
@@ -19,9 +20,11 @@ import java.util.stream.Collectors;
 //}
 
 // (step-2) making it dynamic using equalsIgnoreCase() method
+//--------------------------------------------------------------
 //public class TaxServiceLayer {
 //
 //	public static List<Employee> evaluateTaxUsers(String input) {
+//		
 //		if (input.equalsIgnoreCase("tax")) {
 //			return DataBase.getEmployees().stream().filter(emp -> emp.getSalary() > 500000)
 //					.collect(Collectors.toList());
@@ -40,6 +43,7 @@ import java.util.stream.Collectors;
 //}
 
 // (step-3) using ternary operator instead of if-else condition
+//-----------------------------------------------------------------
 public class TaxServiceLayer {
 
 	public static List<Employee> evaluateTaxUsers(String input) {
@@ -54,7 +58,7 @@ public class TaxServiceLayer {
 
 	public static void main(String[] args) {
 
-		//System.out.println(TaxServiceLayer.evaluateTaxUsers("tax")); // for above 5 lakhs salary
+		System.out.println(TaxServiceLayer.evaluateTaxUsers("tax")); // for above 5 lakhs salary
 		System.out.println(TaxServiceLayer.evaluateTaxUsers("non tax")); // for below 5 lakhs salary
 	}
 

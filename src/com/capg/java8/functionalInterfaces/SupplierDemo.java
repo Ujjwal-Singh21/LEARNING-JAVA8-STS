@@ -2,7 +2,7 @@ package com.capg.java8.functionalInterfaces;
 
 import java.util.function.Supplier;
 
-//Supplier :- takes no argument but something.
+//Supplier :- takes no argument but reurns something.
 //WITHOUT LAMBDA USING TRADITIONAL METHOD
 public class SupplierDemo implements Supplier<String> {
 

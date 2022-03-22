@@ -4,8 +4,9 @@ import java.util.Comparator;
 import java.util.Map;
 import java.util.TreeMap;
 
-// If map key contains some custom object instead of primitive hence Using Employee Pojo
+//If map key contains some custom object instead of primitive hence Using Employee Pojo
 //Sorting using comparator
+//--------------------------------------------------------------------------------------------
 //public class SortMapDemo2 {
 //
 //	public static void main(String[] args) {
@@ -26,6 +27,7 @@ import java.util.TreeMap;
 //}
 
 //Sorting using Strem Api
+//--------------------------
 public class SortMapDemo2 {
 
 	public static void main(String[] args) {

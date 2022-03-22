@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 // (step-1) Traditional approach
+//-------------------------------
 public class SortMapDemo1 {
 
 	public static void main(String[] args) {
@@ -19,18 +20,18 @@ public class SortMapDemo1 {
 		map.put("ten", 10);
 		map.put("two", 2);
 
-		List<Entry<String, Integer>> entries = new ArrayList<>(map.entrySet());
+		List<Map.Entry<String, Integer>> entries = new ArrayList<>(map.entrySet());
 
-		Collections.sort(entries, new Comparator<Entry<String, Integer>>() {
+		Collections.sort(entries, new Comparator<Map.Entry<String, Integer>>() {
 
 			@Override
-			public int compare(Entry<String, Integer> o1, Entry<String, Integer> o2) {
+			public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
 
 				return o1.getKey().compareTo(o2.getKey());
 			}
 		});
 
-		for (Entry<String, Integer> entry : entries) {
+		for (Map.Entry<String, Integer> entry : entries) {
 			System.out.println(entry.getKey() + " " + entry.getValue());
 		}
 	}
@@ -38,6 +39,7 @@ public class SortMapDemo1 {
 }
 
 // (step-2) using LAMBDA
+//--------------------------
 //public class SortMapDemo1 {
 //
 //	public static void main(String[] args) {
@@ -60,6 +62,7 @@ public class SortMapDemo1 {
 //}
 
 // (step-3) using STREAM API
+//-------------------------------
 //public class SortMapDemo1 {
 //
 //	public static void main(String[] args) {
@@ -76,13 +79,13 @@ public class SortMapDemo1 {
 //
 //		System.out.println("*********************");
 //
-//		// SORTING BY KEY USING comparingByKey() method that returns a comparator to
+//		// SORTING BY KEY USING comparingByValue() method that returns a comparator to
 //		// compare Map.Entry
 //		map.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEach(System.out::println);
 //
 //	}
 //
 //}
-
-
-
+//
+//
+//

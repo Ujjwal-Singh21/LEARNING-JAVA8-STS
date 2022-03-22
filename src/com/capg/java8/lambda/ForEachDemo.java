@@ -10,6 +10,7 @@ public class ForEachDemo {
 
 	public static void main(String[] args) {
 
+		//We have create an Array as List here for numbers
 		List<Integer> list = Arrays.asList(5, 6, 7, 8, 9);
 
 		list.forEach(i -> System.out.println(i)); // FOR-EACH TAKES CONSUMER OBJECT AS INPUT

@@ -18,11 +18,12 @@ import java.util.function.Supplier;
 //
 //}
 
-// (STEP-1) WITH LAMBDA USING "findAny()" and "orElseGet()" METHOD THAT TAKES SUPPLIER OBJECT AS INPUT
+// (STEP-1) WITH LAMBDA USING "findAny()" & "orElseGet()" -> METHOD THAT TAKES SUPPLIER OBJECT AS INPUT
 //public class SupplierDemo3 {
 //
 //	public static void main(String[] args) {
 //
+//      //Creating a Names Array as List
 //		List<String> nameList = Arrays.asList("Michael", "James", "Tony");
 //		Supplier<String> supplier = () -> "Hello Ujjwal Again";
 //
@@ -35,17 +36,17 @@ import java.util.function.Supplier;
 
 // (STEP-3) WITHOUT PASSING SUPPLIER OBJECT REFERENCE DIRECTLY TO "orElseGet()" METHOD.
 // DIRECTLY PASSING RIGHT SIDE INSTEAD OF OBJECT (REMOVE LHS OF LINE 45)
-public class SupplierDemo3 {
-
-	public static void main(String[] args) {
-
-		// Keeping list empty so that "orElseGet()" can execute.
-		List<String> nameList = Arrays.asList();
-
-		// Supplier<String> supplier = () -> "Hello Ujjwal Again";
-
-		System.out.println(nameList.stream().findAny().orElseGet(() -> "Hello Ujjwal Again"));
-
-	}
-
-}
+//public class SupplierDemo3 {
+//
+//	public static void main(String[] args) {
+//
+//		// Keeping list empty so that "orElseGet()" can execute.
+//		List<String> nameList = Arrays.asList();
+//
+//		// Supplier<String> supplier = () -> "Hello Ujjwal Again";
+//
+//		System.out.println(nameList.stream().findAny().orElseGet(() -> "Hello Ujjwal Again"));
+//
+//	}
+//
+//}

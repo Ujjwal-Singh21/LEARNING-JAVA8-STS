@@ -1,24 +1,28 @@
 package com.capg.java8.lambdawithcomparataor;
 
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 // SORTING BASED ON NAME 
+//------------------------
 //(STEP-0) 
-//WITHOUT LAMBDA USING ANONYMOUS CLASS FOR PASSING COMPARATAOR OBJECT TO SORT METHOD ARGUEMENT
+//WITHOUT LAMBDA USING ANONYMOUS CLASS FOR PASSING COMPARATOR OBJECT TO SORT METHOD ARGUEMENT
+//-----------------------------------------------------------------------------------------------
 //public class BookService {
 //
 //	public List<Book> getBooksInSorted() {
+//
+//		// getting books from DAO class
 //		List<Book> books = new BookDAO().getBooks();
+//
 //		Collections.sort(books, new Comparator<Book>() {
 //
 //			@Override
-//			public int compare(Book o1, Book o2) {
-//				return o1.getName().compareTo(o2.getName());
+//			public int compare(Book book1, Book book2) {
+//				return book1.getName().compareTo(book2.getName());
 //			}
-//
 //		});
+//
 //		return books;
 //	}
 //
@@ -35,11 +39,16 @@ import java.util.List;
 
 // (step-1) USING LAMBDA 
 //(take above override code separately remove and make lambda and copy paste near passing comparator object)
+//------------------------------------------------------------------------------------------------------------
 //public class BookService {
 //
 //	public List<Book> getBooksInSorted() {
+//		
+//		// getting books from DAO class
 //		List<Book> books = new BookDAO().getBooks();
-//		Collections.sort(books, (o1, o2) -> o1.getName().compareTo(o2.getName()));
+//		
+//      //sorting
+//		Collections.sort(books, (book1, book2) -> book1.getName().compareTo(book2.getName()));
 //		return books;
 //	}
 //
@@ -55,17 +64,31 @@ import java.util.List;
 //}
 
 //SORTING BASED ON ID USING LAMBDA
+//------------------------------------
 //public class BookService {
 //
 //	public List<Book> getBooksInSorted() {
+//
+//		// getting books from DAO class
 //		List<Book> books = new BookDAO().getBooks();
-//		Collections.sort(books, (o1, o2) -> {
-//			if (o1.getBookId() > o2.getBookId())
+//
+//		// sorting
+//		Collections.sort(books, (book1, book2) -> {
+//
+//			if (book1.getBookId() > book2.getBookId())
 //				return 1;
 //			else
 //				return -1;
 //		});
+//		
 //		return books;
+//		
+//		//another way
+//
+//		// parsing
+////		Integer bookid1 = (Integer) ((Book) book1).getBookId();
+////		Integer bookid2 = (Integer) ((Book) book1).getBookId();
+////		return bookid1.compareTo(bookid2);
 //	}
 //
 //	public static void main(String[] args) {
@@ -80,11 +103,16 @@ import java.util.List;
 //}
 
 // more simplified
+//--------------------
 public class BookService {
 
 	public List<Book> getBooksInSorted() {
+		
+		//getting List of Books from DAO class
 		List<Book> books = new BookDAO().getBooks();
-		Collections.sort(books, (o1, o2) -> o2.getBookId() - o1.getBookId());
+		
+		//sorting
+		Collections.sort(books, (book1, book2) -> book2.getBookId() - book1.getBookId());
 		return books;
 	}
 

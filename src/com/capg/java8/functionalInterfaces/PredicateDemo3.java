@@ -25,6 +25,7 @@ import java.util.function.Predicate;
 //}
 
 // SINCE PREDICATE NORMALLY RETURNS BOOLEAN TYPE , NO NEED TO WRITE IF ELSE , JUST WRITE LOGIC(t % 2 == 0)
+//Doing no opeartions here, go next
 //(STEP-1) MORE SPECIFIED WITH LAMBDA 
 //public class PredicateDemo3 {
 //
@@ -32,6 +33,7 @@ import java.util.function.Predicate;
 //
 //		Predicate<Integer> predicate = t -> t % 2 == 0;
 //
+//      //creating an Array as List
 //		List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
 //
 //		list.forEach(t -> System.out.println(t)); // FOR-EACH TAKES CONSUMER OBJECT AS INPUT
@@ -46,6 +48,7 @@ import java.util.function.Predicate;
 //
 //		Predicate<Integer> predicate = t -> t % 2 == 0;
 //
+//      //creating an Array as List
 //		List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 //
 //		// DIRECTLY PASSING PREDICATE OBJECT REFERENCE TO FILTER METHOD
@@ -61,7 +64,8 @@ public class PredicateDemo3 {
 	public static void main(String[] args) {
 
 		// Predicate<Integer> predicate = t -> t % 2 == 0;
-
+		
+        //creating an Array as List
 		List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
 		// FILTER TAKES PREDICATE OBJECT AS INPUT

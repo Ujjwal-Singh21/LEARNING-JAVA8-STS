@@ -20,7 +20,7 @@ import java.util.function.Function;
 //}
 
 // more simplified
-public class MapDemo {
+public class MapDemo { 
 
 	public static void main(String[] args) {
 

@@ -11,6 +11,7 @@ import java.util.function.Function;
 //
 //	public static void main(String[] args) {
 //
+//     //creating a String Array as List
 //		List<String> words = Arrays.asList("Hello", "Stream", "Learning");
 //
 //		Function<String, Integer> function = new Function<String, Integer>() {
@@ -34,13 +35,13 @@ import java.util.function.Function;
 //
 //	public static void main(String[] args) {
 //
+//      //creating a String Array as List
 //		List<String> words = Arrays.asList("Hello", "Stream", "Learning");
 //
-//		Function<String, Integer> function =(String t)-> {
+//		Function<String, Integer> function = (String t)-> {
 //
 //				return t.length();
 //			
-//
 //		};
 //		
 //		// here map method takes Function as input argument

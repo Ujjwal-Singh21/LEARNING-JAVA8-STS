@@ -6,7 +6,6 @@ import java.util.function.Consumer;
 
 // BREAKDOWN OF FOR-EACH LOOP USING CONSUMER INTERFACE
 // MAKING SEPERATE IMPLEMENTATION CLASS FOR CONSUMER INTERFACE , has a method accept();
-
 class ConsumerImpl implements Consumer<Integer> {
 
 	@Override
@@ -22,10 +21,14 @@ public class ForEachDemo2 {
 
 	public static void main(String[] args) {
 
+		//We have create an Array as List here for numbers
 		List<Integer> list = Arrays.asList(5, 6, 7, 8, 9);
 
-		Consumer<Integer> consumer = new ConsumerImpl();  //creating object of consumer interface
-		list.forEach(consumer);   // passing that consumer object as parameter to for-each
+		//creating reference of consumer interface using its implementation class
+		Consumer<Integer> consumer = new ConsumerImpl(); 
+		
+	    // passing that consumer object as parameter to for-each
+		list.forEach(consumer);  
 	}
 
 }
@@ -44,6 +47,7 @@ public class ForEachDemo2 {
 //			}
 //
 //		};
+
 //		list.forEach(consumer); // passing object of consumer to for-each
 //	}
 //
