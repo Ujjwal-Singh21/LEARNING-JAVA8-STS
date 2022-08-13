@@ -1,5 +1,4 @@
 package com.capg.java8.mapVsflatMap;
-
 import java.util.List;
 
 public class Customer {
@@ -11,7 +10,6 @@ public class Customer {
 
 	public Customer() {
 		super();
-
 	}
 
 	public Customer(int id, String name, String emailId, List<String> phoneNumbers) {
@@ -59,7 +57,5 @@ public class Customer {
 		return "Customer [id=" + id + ", name=" + name + ", emailId=" + emailId + ", phoneNumbers=" + phoneNumbers
 				+ "]";
 	}
-	
-	
 
 }

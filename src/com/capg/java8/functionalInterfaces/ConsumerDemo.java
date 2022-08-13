@@ -1,9 +1,9 @@
 package com.capg.java8.functionalInterfaces;
-
 import java.util.function.Consumer;
 
-// Consumer :- takes an argument but returns nothing
-//WITHOUT LAMBDA USING TRADITIONAL METHOD
+// Consumer -> takes an argument but returns nothing
+// WITHOUT LAMBDA USING TRADITIONAL APPROACH 
+//-----------------------------------------------------
 public class ConsumerDemo implements Consumer<Integer> {
 
 	@Override
@@ -15,7 +15,5 @@ public class ConsumerDemo implements Consumer<Integer> {
 
 		Consumer<Integer> consumer = new ConsumerDemo();
 		consumer.accept(33);
-
 	}
-
 }

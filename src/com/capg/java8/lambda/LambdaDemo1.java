@@ -1,7 +1,6 @@
 package com.capg.java8.lambda;
 
 interface A {
-
 	public abstract void show();
 }
 
@@ -11,9 +10,7 @@ class Implementation implements A {
 	@Override
 	public void show() {
 		System.out.println("Lambda Expression");
-
 	}
-
 }
 
 public class LambdaDemo1 {
@@ -23,5 +20,4 @@ public class LambdaDemo1 {
 		A a = new Implementation();
 		a.show();
 	}
-
 }

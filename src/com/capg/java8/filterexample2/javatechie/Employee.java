@@ -1,6 +1,7 @@
 package com.capg.java8.filterexample2.javatechie;
 
-//pojo
+// pojo class for Employee 
+//------------------------
 public class Employee {
 
 	private int empId;

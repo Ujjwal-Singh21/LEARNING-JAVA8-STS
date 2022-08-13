@@ -1,5 +1,4 @@
 package com.capg.java8.mapVsflatMap;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -12,20 +11,18 @@ public class MapVsFlatMap {
 		// using map() method -> List<Customers> convert List<String> -> getting just emailIds
 		// customer -> customer.getEmailId() ONE TO ONE MAPPING
 		List<String> emails = customers.stream().map(customer -> customer.getEmailId()).collect(Collectors.toList());
-		System.out.println("emails :" + emails);
+		System.out.println("emails: " + emails);
 
 		// customer -> customer -> employee.getPhoneNumbers() ONE TO MANY MAPPING
-		// but output is non-flattered, it returns list of list of  String:(List<List<String>>)
-		List<List<String>> phoneNumbers = customers.stream().map(customer -> customer.getPhoneNumbers())
-				.collect(Collectors.toList());
-		System.out.println("PhoneNumbers :" + phoneNumbers);
+		// but output is non-flattered, it returns list of list of String:(List<List<String>>)
+		List<List<String>> phoneNumbers = customers.stream()
+				.map(customer -> customer.getPhoneNumbers()).collect(Collectors.toList());
+		System.out.println("PhoneNumbers: " + phoneNumbers);
 
-		// hence using flatMap() which takes input as stream of stream and gives
-		// flattered output
+		// hence using flatMap() which takes input as stream of stream and gives flattered output
 		List<String> phoneNumbers2 = customers.stream().flatMap(customer -> customer.getPhoneNumbers().stream())
 				.collect(Collectors.toList());
-		System.out.println("PhoneNumbers2 :" + phoneNumbers2);
+		System.out.println("PhoneNumbers2: " + phoneNumbers2);
 
 	}
-
 }

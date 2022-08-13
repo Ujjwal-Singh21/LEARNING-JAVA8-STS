@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 // 1) using stream.of() method inside which we will create multiple objects for Customer.
 // 2) Reason to use -> as soon as an object gets created it becomes a Stream.
 // 3) So at the end we can easily collect them all as List and return it.
-
+//------------------------------------------------------------------------------------------
 public class EkartDataBase {
 
 	public static List<Customer> getAllCustomers() {

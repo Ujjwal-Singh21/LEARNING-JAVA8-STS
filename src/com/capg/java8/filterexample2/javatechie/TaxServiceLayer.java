@@ -49,10 +49,10 @@ public class TaxServiceLayer {
 	public static List<Employee> evaluateTaxUsers(String input) {
 
 		return (input.equalsIgnoreCase("tax"))
-				? DataBase.getEmployees().stream().filter(emp -> emp.getSalary() > 500000).collect(Collectors.toList())
+				? DataBase.getAllEmployees().stream().filter(emp -> emp.getSalary() > 500000).collect(Collectors.toList())
 				:
 
-				DataBase.getEmployees().stream().filter(emp -> emp.getSalary() <= 500000).collect(Collectors.toList());
+				DataBase.getAllEmployees().stream().filter(emp -> emp.getSalary() <= 500000).collect(Collectors.toList());
 
 	}
 

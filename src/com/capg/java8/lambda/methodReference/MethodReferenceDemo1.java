@@ -1,10 +1,9 @@
 package com.capg.java8.lambda.methodReference;
 
-// simple basic example
+// Simple basic example
 class MyPrinter1 {
 
 	public void print(String str) {
-
 		System.out.println(str);
 	}
 }
@@ -18,5 +17,4 @@ public class MethodReferenceDemo1 {
 		myPrinter1.print(str);
 
 	}
-
 }

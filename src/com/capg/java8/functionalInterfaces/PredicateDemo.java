@@ -1,9 +1,9 @@
 package com.capg.java8.functionalInterfaces;
-
 import java.util.function.Predicate;
 
-// Consumer :- takes an argument and returns BOOLEAN either true or false.
+// Consumer -> takes an argument and returns BOOLEAN either true or false.
 // WITHOUT LAMBDA USING TRADITIONAL METHOD
+//------------------------------------------------------------------------
 public class PredicateDemo implements Predicate<Integer> {
 
 	@Override
@@ -19,5 +19,4 @@ public class PredicateDemo implements Predicate<Integer> {
 		Predicate<Integer> predicate = new PredicateDemo();
 		System.out.println(predicate.test(4));
 	}
-
 }
